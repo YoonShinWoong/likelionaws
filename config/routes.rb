@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   devise_for :users
   root 'post#index'
-
+  
   get 'reply/create'
   post 'reply/create'
 
@@ -32,6 +32,9 @@ Rails.application.routes.draw do
   
   get '/likes/likes_toggle/:id' => 'likes#likes_toggle'
   post '/likes/likes_toggle'
+  
+  get 'post/ajaxCall' => 'post#ajaxCall'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

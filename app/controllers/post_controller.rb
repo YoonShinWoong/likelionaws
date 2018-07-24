@@ -4,7 +4,21 @@ class PostController < ApplicationController
   def index
     @post = Post.all.reverse
   end
-
+  
+  def ajaxCall
+    count = params[:count].to_i
+    @item = Post.all.at(count)
+  
+    @return_value = {
+    "id" => @item.id, 
+    "user" => @item.user_id, 
+    "title" => @item.title, 
+    "time" => @item.created_at
+    }
+    render json: @return_value
+    
+  end
+  
   def new
   end
 

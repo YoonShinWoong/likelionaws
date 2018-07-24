@@ -9,6 +9,6 @@
 (1..3).each do |i|
     User.create(username: i, email: "#{i}@#{i}.com", password: "123123", password_confirmation: "123123" )
     (1..3).each do |j|
-        Post.create(title: "#{i}가 #{j}번 쨰 글을 작성했습니다.", content: "#{i}가 쓴 #{j}번 째 글입니다.", user_id:i)
+        Post.create(title: "#{i}가 #{j}번 째 글을 작성했습니다.", content: "#{i}가 쓴 #{j}번 째 글입니다.", user_id:i)
     end
 end
