@@ -37,6 +37,7 @@ gem 'mini_magick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
   gem 'sqlite3'
+  gem 'therubyracer'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
